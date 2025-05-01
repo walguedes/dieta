@@ -8,7 +8,11 @@ const AuthorSection = () => {
       <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
         <div className="md:w-1/3">
           <div className="rounded-full overflow-hidden border-4 border-brand-green w-48 h-48 mx-auto">
-            <img src="/placeholder.svg" alt="Autor do eBook" className="w-full h-full object-cover" />
+            <img 
+              src="public/lovable-uploads/1d18b287-8892-4de9-8d18-6560259f2367.png" 
+              alt="Antony Pissinatti" 
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
         <div className="md:w-2/3">

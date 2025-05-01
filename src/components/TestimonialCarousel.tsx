@@ -7,6 +7,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogClose
+} from "./ui/dialog";
+import { X } from "lucide-react";
 
 // Array com os caminhos das imagens de depoimentos
 const testimonialImages = [
@@ -22,51 +28,70 @@ const testimonialImages = [
 ];
 
 const TestimonialCarousel: React.FC = () => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  const handleImageClick = (image: string) => {
+    setSelectedImage(image);
+    setDialogOpen(true);
+  };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-10">
-      <Carousel
-        className="w-full"
-        opts={{
-          align: "center",
-          loop: true,
-        }}
-      >
-        <CarouselContent className="-ml-2 md:-ml-4">
-          {testimonialImages.map((image, index) => (
-            <CarouselItem 
-              key={index} 
-              className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
-            >
-              <div 
-                className="relative overflow-hidden rounded-lg shadow-md transition-all duration-300 ease-in-out"
-                style={{ 
-                  height: "480px", 
-                  transform: expandedIndex === index ? "scale(1.7)" : "scale(1)",
-                  zIndex: expandedIndex === index ? 50 : 1,
-                  transformOrigin: "center",
-                  transition: "transform 0.3s ease"
-                }}
-                onMouseEnter={() => setExpandedIndex(index)}
-                onMouseLeave={() => setExpandedIndex(null)}
+    <>
+      <div className="w-full max-w-4xl mx-auto px-4 py-10">
+        <Carousel
+          className="w-full"
+          opts={{
+            align: "center",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {testimonialImages.map((image, index) => (
+              <CarouselItem 
+                key={index} 
+                className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
               >
-                <img 
-                  src={image} 
-                  alt={`Depoimento ${index + 1}`}
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="hidden md:flex" />
-        <CarouselNext className="hidden md:flex" />
-      </Carousel>
-      <div className="mt-4 text-center text-sm text-gray-500">
-        <p>Passe o mouse sobre as imagens para ampliar e ler melhor os depoimentos</p>
+                <div 
+                  className="relative overflow-hidden rounded-lg shadow-md transition-all duration-300 ease-in-out cursor-pointer"
+                  style={{ height: "480px" }}
+                  onClick={() => handleImageClick(image)}
+                >
+                  <img 
+                    src={image} 
+                    alt={`Depoimento ${index + 1}`}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
+        <div className="mt-4 text-center text-sm text-gray-500">
+          <p>Clique nas imagens para ampliar e ler melhor os depoimentos</p>
+        </div>
       </div>
-    </div>
+
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogContent className="max-w-4xl w-[90vw] h-[90vh] p-0">
+          <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground bg-white z-10">
+            <X className="h-6 w-6" />
+            <span className="sr-only">Fechar</span>
+          </DialogClose>
+          {selectedImage && (
+            <div className="w-full h-full overflow-auto flex items-center justify-center bg-black/50">
+              <img 
+                src={selectedImage} 
+                alt="Depoimento ampliado" 
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 

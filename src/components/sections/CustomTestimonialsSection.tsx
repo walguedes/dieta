@@ -14,7 +14,7 @@ const CustomTestimonialsSection: React.FC = () => {
           </p>
         </div>
         
-        {/* Novo componente de carrossel de depoimentos */}
+        {/* Componente de carrossel de depoimentos com popup ao clicar */}
         <TestimonialCarousel />
       </div>
     </SectionContainer>
