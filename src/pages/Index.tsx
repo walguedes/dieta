@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { toast } from 'sonner';
-import FloatingCTA from '@/components/FloatingCTA';
 import HeroSection from '@/components/sections/HeroSection';
 import IdentificationSection from '@/components/sections/IdentificationSection';
 import CalculatorSection from '@/components/sections/CalculatorSection';
@@ -13,6 +12,8 @@ import OfferSection from '@/components/sections/OfferSection';
 import FAQSection from '@/components/sections/FAQSection';
 import FinalCTASection from '@/components/sections/FinalCTASection';
 import Footer from '@/components/sections/Footer';
+// Import FloatingCTA but comment it out temporarily for debugging
+// import FloatingCTA from '@/components/FloatingCTA';
 
 const Index = () => {
   const handleCTAClick = () => {
@@ -54,9 +55,10 @@ const Index = () => {
       {/* Footer */}
       <Footer />
       
-      {/* Floating CTA Button */}
-      <FloatingCTA onClick={handleCTAClick} />
+      {/* Temporarily comment out the FloatingCTA to see if it's causing issues */}
+      {/* <FloatingCTA onClick={handleCTAClick} /> */}
     </div>
   );
 };
+
 export default Index;

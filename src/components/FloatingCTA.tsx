@@ -51,7 +51,7 @@ const FloatingCTA = ({
       {showScrollTop && (
         <button 
           onClick={scrollToTop}
-          className="h-12 w-12 rounded-full bg-white border border-gray-200 shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors animate-fade-in"
+          className="h-12 w-12 rounded-full bg-white border border-gray-200 shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
           aria-label="Voltar ao topo"
         >
           <ArrowUp className="h-5 w-5 text-brand-blue" />
@@ -60,7 +60,7 @@ const FloatingCTA = ({
       <CTAButton 
         onClick={onClick} 
         className={cn(
-          "shadow-lg animate-fade-in",
+          "shadow-lg",
           isMobile ? "w-full" : ""
         )}
       >
