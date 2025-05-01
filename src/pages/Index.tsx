@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { toast } from 'sonner';
 import CTAButton from '@/components/CTAButton';
@@ -27,13 +26,11 @@ const Index = () => {
             </CTAButton>
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
-            <div className="relative w-[calc(64rem*1.3)] md:w-[calc(80rem*1.3)] transform hover:-translate-y-2 transition-all duration-300">
-              {/* Floating effect shadow */}
-              <div className="absolute inset-0 rounded-lg blur-md bg-gradient-to-r from-brand-green/20 to-blue-500/20 translate-y-4"></div>
-              {/* Main image */}
+            {/* Simplified mockup - twice the previous size with no border/frame */}
+            <div className="w-[calc(64rem*2)] md:w-[calc(80rem*2)] transform hover:-translate-y-2 transition-all duration-300">
               <img 
                 alt="eBook Dieta Prática e Eficaz" 
-                className="relative w-full h-auto transform rotate-3 shadow-xl rounded-lg" 
+                className="w-full h-auto transform rotate-3" 
                 src="/lovable-uploads/5d044985-5010-45bc-b3e0-3ddda1d46c25.png" 
               />
             </div>
@@ -48,19 +45,19 @@ const Index = () => {
             Esse eBook é pra você se...
           </h2>
           <div className="grid gap-6">
-            <div className="bg-brand-green-light p-6 rounded-lg border-l-4 border-brand-green text-left">
+            <div className="bg-[#103252]/10 p-6 rounded-lg border-l-4 border-[#103252] text-left">
               <p className="font-medium">✓ Já tentou várias dietas diferentes e nenhuma funcionou a longo prazo</p>
             </div>
-            <div className="bg-brand-green-light p-6 rounded-lg border-l-4 border-brand-green text-left">
+            <div className="bg-[#103252]/10 p-6 rounded-lg border-l-4 border-[#103252] text-left">
               <p className="font-medium">✓ Está cansado de contar calorias e se privar de alimentos que gosta</p>
             </div>
-            <div className="bg-brand-green-light p-6 rounded-lg border-l-4 border-brand-green text-left">
+            <div className="bg-[#103252]/10 p-6 rounded-lg border-l-4 border-[#103252] text-left">
               <p className="font-medium">✓ Quer uma solução prática e que se adapte à sua rotina</p>
             </div>
-            <div className="bg-brand-green-light p-6 rounded-lg border-l-4 border-brand-green text-left">
+            <div className="bg-[#103252]/10 p-6 rounded-lg border-l-4 border-[#103252] text-left">
               <p className="font-medium">✓ Deseja emagrecer sem perder massa muscular e energia</p>
             </div>
-            <div className="bg-brand-green-light p-6 rounded-lg border-l-4 border-brand-green text-left">
+            <div className="bg-[#103252]/10 p-6 rounded-lg border-l-4 border-[#103252] text-left">
               <p className="font-medium">✓ Precisa de um método simples e direto ao ponto para resultados reais</p>
             </div>
           </div>
@@ -155,19 +152,19 @@ Pra simplificar o que te disseram que era difícil.</p>
             </div>
             
             <div className="flex justify-center mb-10">
-              <div className="bg-brand-gray-light p-6 rounded-lg px-[24px] max-w-md mx-auto">
+              <div className="bg-[#103252]/10 p-6 rounded-lg px-[24px] max-w-md mx-auto">
                 <h3 className="font-semibold text-lg text-brand-blue mb-3">eBook Principal</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <span className="text-brand-green mr-2">✓</span>
+                    <span className="text-[#103252] mr-2">✓</span>
                     <span>Manual completo em PDF com linguagem clara</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-brand-green mr-2">✓</span>
+                    <span className="text-[#103252] mr-2">✓</span>
                     <span>Fórmula baseada no seu peso — sem contar calorias</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-brand-green mr-2">✓</span>
+                    <span className="text-[#103252] mr-2">✓</span>
                     <span>Estratégia de alimentação, treino e mentalidade para qualquer rotina</span>
                   </li>
                 </ul>

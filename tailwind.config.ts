@@ -65,8 +65,8 @@ export default {
 				},
 				// Custom colors for the landing page
 				'brand': {
-					'green': '#4ade80',
-					'green-light': '#d1fae5',
+					'green': '#103252', // Changed from #4ade80 to #103252
+					'green-light': '#103252/10', // Changed to a transparent version of #103252
 					'blue': '#1A1F2C',
 					'gray-light': '#F1F1F1',
 				},
