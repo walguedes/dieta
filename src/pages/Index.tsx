@@ -129,7 +129,7 @@ Pra simplificar o que te disseram que era difícil.</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 mb-10">
-              <div className="bg-brand-gray-light p-6 rounded-lg">
+              <div className="bg-brand-gray-light p-6 rounded-lg px-[24px]">
                 <h3 className="font-semibold text-lg text-brand-blue mb-3">eBook Principal</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start">
@@ -147,23 +147,7 @@ Pra simplificar o que te disseram que era difícil.</p>
                 </ul>
               </div>
               
-              <div className="bg-brand-gray-light p-6 rounded-lg">
-                <h3 className="font-semibold text-lg text-brand-blue mb-3">Bônus Exclusivos</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-brand-green mr-2">✓</span>
-                    <span>Planilha de acompanhamento semanal</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-green mr-2">✓</span>
-                    <span>30 receitas práticas e saudáveis</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-green mr-2">✓</span>
-                    <span>Guia para comer fora de casa</span>
-                  </li>
-                </ul>
-              </div>
+              
             </div>
             
             <div className="text-center mb-8">
