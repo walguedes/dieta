@@ -1,15 +1,13 @@
-
 import React from 'react';
 import SectionContainer from '@/components/SectionContainer';
 import CTAButton from '@/components/CTAButton';
-
 interface OfferSectionProps {
   onCTAClick: () => void;
 }
-
-const OfferSection = ({ onCTAClick }: OfferSectionProps) => {
-  return (
-    <SectionContainer>
+const OfferSection = ({
+  onCTAClick
+}: OfferSectionProps) => {
+  return <SectionContainer>
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl p-6 md:p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
           <div className="text-center mb-8">
@@ -43,10 +41,8 @@ const OfferSection = ({ onCTAClick }: OfferSectionProps) => {
           
           <div className="text-center mb-8">
             <div className="mb-4">
-              <span className="text-gray-500 line-through text-lg">De R$ 197,00</span>
-              <p className="text-3xl md:text-4xl font-bold text-brand-blue animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]">
-                Por apenas R$ 97,00
-              </p>
+              <span className="text-gray-500 line-through text-lg">De R$ 49,90</span>
+              <p className="text-3xl md:text-4xl font-bold text-brand-blue animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]">Por apenas R$ 19,90</p>
               <p className="text-sm text-gray-600 mt-1">Pagamento único e seguro</p>
             </div>
             
@@ -67,8 +63,6 @@ const OfferSection = ({ onCTAClick }: OfferSectionProps) => {
           </div>
         </div>
       </div>
-    </SectionContainer>
-  );
+    </SectionContainer>;
 };
-
 export default OfferSection;
