@@ -6,7 +6,6 @@ import TestimonialCard from '@/components/TestimonialCard';
 import FAQItem from '@/components/FAQItem';
 import BenefitItem from '@/components/BenefitItem';
 import TransformationCard from '@/components/TransformationCard';
-
 const Index = () => {
   const handleCTAClick = () => {
     toast.success("Esta é uma demonstração de landing page. O botão de compra estaria funcionando aqui.");
@@ -29,7 +28,7 @@ const Index = () => {
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative">
               <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-brand-green to-blue-500 opacity-30 blur"></div>
-              <img src="/lovable-uploads/2f8e1c9f-15e8-434a-8c5b-c9f3ccc54e92.png" alt="eBook Dieta Prática e Eficaz" className="relative w-64 md:w-80 h-auto transform rotate-3 shadow-2xl rounded-lg border-4 border-white" />
+              <img alt="eBook Dieta Prática e Eficaz" className="relative w-64 md:w-80 h-auto transform rotate-3 shadow-2xl rounded-lg border-4 border-white" src="/lovable-uploads/5d044985-5010-45bc-b3e0-3ddda1d46c25.png" />
             </div>
           </div>
         </div>
@@ -91,23 +90,9 @@ const Index = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <TransformationCard 
-            name="Carlos Silva"
-            timeframe="3 meses"
-            weightLoss="-18kg"
-            beforeImage="/placeholder.svg" 
-            afterImage="/placeholder.svg"
-            testimonial="Sempre tentei dietas restritivas que não conseguia manter. Com este método, consegui emagrecer sem sofrer e mantive os resultados!"
-          />
+          <TransformationCard name="Carlos Silva" timeframe="3 meses" weightLoss="-18kg" beforeImage="/placeholder.svg" afterImage="/placeholder.svg" testimonial="Sempre tentei dietas restritivas que não conseguia manter. Com este método, consegui emagrecer sem sofrer e mantive os resultados!" />
           
-          <TransformationCard 
-            name="Mariana Oliveira"
-            timeframe="2 meses"
-            weightLoss="-12kg"
-            beforeImage="/placeholder.svg" 
-            afterImage="/placeholder.svg"
-            testimonial="Perdi peso e ganhei energia! O método é super fácil de seguir e se encaixou perfeitamente na minha rotina."
-          />
+          <TransformationCard name="Mariana Oliveira" timeframe="2 meses" weightLoss="-12kg" beforeImage="/placeholder.svg" afterImage="/placeholder.svg" testimonial="Perdi peso e ganhei energia! O método é super fácil de seguir e se encaixou perfeitamente na minha rotina." />
         </div>
       </SectionContainer>
 
