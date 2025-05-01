@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 interface TransformationCardProps {
   name: string;
   timeframe: string;
-  weightLoss: string;
+  weightLoss?: string;
   beforeImage: string;
   afterImage: string;
   testimonial: string;
@@ -55,9 +55,9 @@ const TransformationCard = ({
           </div>
         </div>
         
-        {/* Transformation Details */}
+        {/* Transformation Details - Removed weightLoss reference */}
         <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-brand-blue text-white px-4 py-1 text-lg font-bold rounded-full whitespace-nowrap">
-          {weightLoss} em {timeframe}
+          {timeframe} de transformação
         </div>
       </div>
       
