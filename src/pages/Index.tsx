@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { toast } from 'sonner';
 import CTAButton from '@/components/CTAButton';
@@ -26,9 +27,15 @@ const Index = () => {
             </CTAButton>
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
-            <div className="relative">
-              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-brand-green to-blue-500 opacity-30 blur"></div>
-              <img alt="eBook Dieta Prática e Eficaz" className="relative w-64 md:w-80 h-auto transform rotate-3 shadow-2xl rounded-lg border-4 border-white" src="/lovable-uploads/5d044985-5010-45bc-b3e0-3ddda1d46c25.png" />
+            <div className="relative w-[calc(64rem*1.3)] md:w-[calc(80rem*1.3)] transform hover:-translate-y-2 transition-all duration-300">
+              {/* Floating effect shadow */}
+              <div className="absolute inset-0 rounded-lg blur-md bg-gradient-to-r from-brand-green/20 to-blue-500/20 translate-y-4"></div>
+              {/* Main image */}
+              <img 
+                alt="eBook Dieta Prática e Eficaz" 
+                className="relative w-full h-auto transform rotate-3 shadow-xl rounded-lg" 
+                src="/lovable-uploads/5d044985-5010-45bc-b3e0-3ddda1d46c25.png" 
+              />
             </div>
           </div>
         </div>
@@ -147,8 +154,8 @@ Pra simplificar o que te disseram que era difícil.</p>
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 mb-10">
-              <div className="bg-brand-gray-light p-6 rounded-lg px-[24px]">
+            <div className="flex justify-center mb-10">
+              <div className="bg-brand-gray-light p-6 rounded-lg px-[24px] max-w-md mx-auto">
                 <h3 className="font-semibold text-lg text-brand-blue mb-3">eBook Principal</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start">
@@ -165,8 +172,6 @@ Pra simplificar o que te disseram que era difícil.</p>
                   </li>
                 </ul>
               </div>
-              
-              
             </div>
             
             <div className="text-center mb-8">
