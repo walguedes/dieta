@@ -1,301 +1,58 @@
+
 import React from 'react';
 import { toast } from 'sonner';
-import CTAButton from '@/components/CTAButton';
-import SectionContainer from '@/components/SectionContainer';
-import TestimonialCard from '@/components/TestimonialCard';
-import FAQItem from '@/components/FAQItem';
-import BenefitItem from '@/components/BenefitItem';
-import TransformationCard from '@/components/TransformationCard';
 import FloatingCTA from '@/components/FloatingCTA';
-import BMICalculator from '@/components/BMICalculator';
-import { useIsMobile } from '@/hooks/use-mobile';
+import HeroSection from '@/components/sections/HeroSection';
+import IdentificationSection from '@/components/sections/IdentificationSection';
+import CalculatorSection from '@/components/sections/CalculatorSection';
+import BenefitsSection from '@/components/sections/BenefitsSection';
+import TransformationsSection from '@/components/sections/TransformationsSection';
+import TestimonialsSection from '@/components/sections/TestimonialsSection';
+import AuthorSection from '@/components/sections/AuthorSection';
+import OfferSection from '@/components/sections/OfferSection';
+import FAQSection from '@/components/sections/FAQSection';
+import FinalCTASection from '@/components/sections/FinalCTASection';
+import Footer from '@/components/sections/Footer';
 
 const Index = () => {
   const handleCTAClick = () => {
     toast.success("Esta é uma demonstração de landing page. O botão de compra estaria funcionando aqui.");
   };
   
-  const isMobile = useIsMobile();
-  
   return (
     <div className="font-poppins relative">
       {/* Hero Section */}
-      <SectionContainer className="pt-10 lg:pt-20 pb-16 md:min-h-screen flex items-center" background="gradient">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-16">
-          <div className="flex-1">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue leading-tight mb-4 animate-[fade-in_0.5s_ease-out]">
-              Transforme seu corpo com um método simples, direto e eficaz.
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 animate-[fade-in_0.7s_ease-out]">
-              Aprenda a calcular sua alimentação com base no seu peso e queime gordura sem perder massa muscular.
-            </p>
-            <CTAButton size="large" animated onClick={handleCTAClick} className="animate-[fade-in_0.9s_ease-out]">
-              Quero o eBook Agora
-            </CTAButton>
-          </div>
-          <div className="flex-1 flex justify-center md:justify-end">
-            {/* Adjusted size to be proportional to title text */}
-            <div className="w-full max-w-[400px] md:max-w-[450px] transform hover:-translate-y-2 hover:scale-105 transition-all duration-500 animate-float">
-              <img 
-                alt="eBook Dieta Prática e Eficaz" 
-                className="w-full h-auto transform rotate-3" 
-                src="/lovable-uploads/5d044985-5010-45bc-b3e0-3ddda1d46c25.png" 
-              />
-            </div>
-          </div>
-        </div>
-      </SectionContainer>
+      <HeroSection onCTAClick={handleCTAClick} />
 
       {/* Identification Section */}
-      <SectionContainer>
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-10 animate-[fade-in_0.5s_ease-out]">
-            Esse eBook é pra você se...
-          </h2>
-          <div className="grid gap-6">
-            <div className="bg-[#103252]/10 p-6 rounded-lg border-l-4 border-[#103252] text-left hover:bg-[#103252]/15 transition-all duration-300 animate-[fade-in_0.6s_ease-out]">
-              <p className="font-medium">✓ Já tentou várias dietas diferentes e nenhuma funcionou a longo prazo</p>
-            </div>
-            <div className="bg-[#103252]/10 p-6 rounded-lg border-l-4 border-[#103252] text-left hover:bg-[#103252]/15 transition-all duration-300 animate-[fade-in_0.7s_ease-out]">
-              <p className="font-medium">✓ Está cansado de contar calorias e se privar de alimentos que gosta</p>
-            </div>
-            <div className="bg-[#103252]/10 p-6 rounded-lg border-l-4 border-[#103252] text-left hover:bg-[#103252]/15 transition-all duration-300 animate-[fade-in_0.8s_ease-out]">
-              <p className="font-medium">✓ Quer uma solução prática e que se adapte à sua rotina</p>
-            </div>
-            <div className="bg-[#103252]/10 p-6 rounded-lg border-l-4 border-[#103252] text-left hover:bg-[#103252]/15 transition-all duration-300 animate-[fade-in_0.9s_ease-out]">
-              <p className="font-medium">✓ Deseja emagrecer sem perder massa muscular e energia</p>
-            </div>
-            <div className="bg-[#103252]/10 p-6 rounded-lg border-l-4 border-[#103252] text-left hover:bg-[#103252]/15 transition-all duration-300 animate-[fade-in_1s_ease-out]">
-              <p className="font-medium">✓ Precisa de um método simples e direto ao ponto para resultados reais</p>
-            </div>
-          </div>
-        </div>
-      </SectionContainer>
+      <IdentificationSection />
 
       {/* Calculator Section */}
-      <SectionContainer background="light">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-3 animate-[fade-in_0.5s_ease-out]">
-            Calcule seu potencial de transformação
-          </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto animate-[fade-in_0.7s_ease-out]">
-            Descubra onde você está e para onde pode ir com nosso método
-          </p>
-        </div>
-        <BMICalculator />
-      </SectionContainer>
+      <CalculatorSection />
 
       {/* Benefits Section */}
-      <SectionContainer>
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-3 animate-[fade-in_0.5s_ease-out]">
-            O que você vai conseguir com este método
-          </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto animate-[fade-in_0.7s_ease-out]">
-            Resultados comprovados por diversas pessoas que já aplicaram este método em suas vidas
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <BenefitItem icon="🔥" title="Acelere seu metabolismo" description="Aprenda como otimizar seu metabolismo para queimar gordura mesmo enquanto descansa." />
-          <BenefitItem icon="🥗" title="Cardápio flexível" description="Adapte o plano aos alimentos que você gosta e sua rotina, sem sofrimento ou restrições extremas." />
-          <BenefitItem icon="💪" title="Preserve massa muscular" description="Emagreça de forma inteligente mantendo seus músculos e evitando o efeito sanfona." />
-          <BenefitItem icon="📊" title="Resultados mensuráveis" description="Acompanhe sua evolução com métricas simples e veja os resultados semana após semana." />
-          <BenefitItem icon="⏱️" title="Economia de tempo" description="Chega de perder horas pesando alimentos ou calculando valores nutricionais." />
-          <BenefitItem icon="🧠" title="Mentalidade transformada" description="Desenvolva uma relação saudável com a comida e elimine a ansiedade alimentar." />
-        </div>
-      </SectionContainer>
+      <BenefitsSection />
 
       {/* Before & After Transformations Section */}
-      <SectionContainer>
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-3 animate-[fade-in_0.5s_ease-out]">
-            Transformações Reais
-          </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto animate-[fade-in_0.7s_ease-out]">
-            Pessoas que aplicaram este método e conquistaram resultados impressionantes
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <TransformationCard name="Carlos Silva" timeframe="3 meses" weightLoss="-18kg" beforeImage="/placeholder.svg" afterImage="/placeholder.svg" testimonial="Sempre tentei dietas restritivas que não conseguia manter. Com este método, consegui emagrecer sem sofrer e mantive os resultados!" />
-          
-          <TransformationCard name="Mariana Oliveira" timeframe="2 meses" weightLoss="-12kg" beforeImage="/placeholder.svg" afterImage="/placeholder.svg" testimonial="Perdi peso e ganhei energia! O método é super fácil de seguir e se encaixou perfeitamente na minha rotina." />
-        </div>
-      </SectionContainer>
+      <TransformationsSection />
 
       {/* Testimonials Section */}
-      <SectionContainer>
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-3 animate-[fade-in_0.5s_ease-out]">
-            Quem aplicou, transformou
-          </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto animate-[fade-in_0.7s_ease-out]">
-            Histórias reais de pessoas que mudaram seus hábitos com nosso método
-          </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          <TestimonialCard quote="Tentei de tudo antes, mas este método finalmente me fez entender como a alimentação funciona. Perdi 8kg em 2 meses sem sofrer!" name="Marcos Silva" image="/placeholder.svg" result="-8kg em 2 meses" />
-          <TestimonialCard quote="Achei que precisaria passar fome para emagrecer. Com este guia, descobri que posso comer bem e ainda assim perder peso de forma saudável." name="Carla Oliveira" image="/placeholder.svg" result="-12kg em 3 meses" />
-          <TestimonialCard quote="O melhor investimento que já fiz. Método direto e sem enrolação. As planilhas de acompanhamento fazem toda diferença." name="Roberto Almeida" image="/placeholder.svg" result="-15kg em 4 meses" />
-        </div>
-      </SectionContainer>
+      <TestimonialsSection />
 
       {/* Author Section */}
-      <SectionContainer background="light">
-        <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
-          <div className="md:w-1/3">
-            <div className="rounded-full overflow-hidden border-4 border-brand-green w-48 h-48 mx-auto">
-              <img src="/placeholder.svg" alt="Autor do eBook" className="w-full h-full object-cover" />
-            </div>
-          </div>
-          <div className="md:w-2/3">
-            <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-4 animate-[fade-in_0.5s_ease-out]">
-              Sobre o Autor
-            </h2>
-            <p className="text-gray-700 mb-4">Olá! Meu nome é Antony Pissinatti.
-Não sou nutricionista, sou alguém que testou, errou, adaptou — e encontrou um caminho simples, direto e eficaz para transformar o corpo sem complicação.</p>
-            <p className="text-gray-700 mb-4">Fui uma única vez ao nutricionista e percebi que aquele modelo engessado não funcionava pra mim. Então passei anos estudando e testando estratégias inspiradas em atletas, até desenvolver uma abordagem prática que cabia na minha rotina — e que finalmente me deu resultado.</p>
-            <p className="text-gray-700">O melhor? Não funcionou só comigo. Pessoas próximas começaram a aplicar também e tiveram transformações reais. Foi aí que nasceu este eBook.
-Pra simplificar o que te disseram que era difícil.</p>
-          </div>
-        </div>
-      </SectionContainer>
+      <AuthorSection />
 
       {/* Offer Section */}
-      <SectionContainer>
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl p-6 md:p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-3 animate-[fade-in_0.5s_ease-out]">
-                O que você vai receber
-              </h2>
-              <p className="text-gray-700 animate-[fade-in_0.7s_ease-out]">
-                Tudo o que você precisa para transformar seu corpo e sua saúde
-              </p>
-            </div>
-            
-            <div className="flex justify-center mb-10">
-              <div className="bg-[#103252]/10 p-6 rounded-lg px-[24px] max-w-md mx-auto hover:bg-[#103252]/15 transition-all duration-300">
-                <h3 className="font-semibold text-lg text-brand-blue mb-3">eBook Principal</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-[#103252] mr-2">✓</span>
-                    <span>Manual completo em PDF com linguagem clara</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#103252] mr-2">✓</span>
-                    <span>Fórmula baseada no seu peso — sem contar calorias</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#103252] mr-2">✓</span>
-                    <span>Estratégia de alimentação, treino e mentalidade para qualquer rotina</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="text-center mb-8">
-              <div className="mb-4">
-                <span className="text-gray-500 line-through text-lg">De R$ 197,00</span>
-                <p className="text-3xl md:text-4xl font-bold text-brand-blue animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]">
-                  Por apenas R$ 97,00
-                </p>
-                <p className="text-sm text-gray-600 mt-1">Pagamento único e seguro</p>
-              </div>
-              
-              <CTAButton size="large" animated onClick={handleCTAClick} className="w-full max-w-md mx-auto">
-                Quero Começar Agora
-              </CTAButton>
-              
-              <p className="mt-4 text-sm text-gray-600">
-                Acesso imediato após a confirmação do pagamento
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <img src="/placeholder.svg" alt="Forma de pagamento" className="h-8" />
-              <img src="/placeholder.svg" alt="Forma de pagamento" className="h-8" />
-              <img src="/placeholder.svg" alt="Forma de pagamento" className="h-8" />
-              <img src="/placeholder.svg" alt="Forma de pagamento" className="h-8" />
-            </div>
-          </div>
-        </div>
-      </SectionContainer>
+      <OfferSection onCTAClick={handleCTAClick} />
 
       {/* FAQ Section */}
-      <SectionContainer background="light">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-3 animate-[fade-in_0.5s_ease-out]">
-              Perguntas Frequentes
-            </h2>
-            <p className="text-gray-700 animate-[fade-in_0.7s_ease-out]">
-              Tire suas dúvidas sobre o método
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300">
-            <FAQItem question="Preciso fazer academia para ter resultados?" answer="Não, o método é baseado primariamente na alimentação. No entanto, incluímos recomendações de atividades físicas simples que podem potencializar seus resultados, caso você queira incluí-las." />
-            <FAQItem question="Este método funciona para mulheres?" answer="Sim! O método foi desenvolvido e testado para funcionar tanto para homens quanto para mulheres. Há orientações específicas para cada gênero, considerando as diferenças metabólicas." />
-            <FAQItem question="Quanto tempo leva para ver resultados?" answer="A maioria das pessoas começa a notar mudanças em 2-3 semanas. Resultados mais significativos geralmente ocorrem dentro de 4-8 semanas seguindo o programa corretamente." />
-            <FAQItem question="Vou precisar comprar alimentos caros ou especiais?" answer="Não. O plano foi desenvolvido para utilizar alimentos comuns e acessíveis. Você não precisará de nenhum ingrediente exótico ou suplemento caro." />
-            <FAQItem question="O que acontece se o método não funcionar para mim?" answer="Oferecemos garantia de 30 dias. Se você seguir o programa e não estiver satisfeito com os resultados, devolveremos seu investimento integralmente." />
-          </div>
-        </div>
-      </SectionContainer>
+      <FAQSection />
 
       {/* Final CTA Section */}
-      <SectionContainer className="pb-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-6 animate-[fade-in_0.5s_ease-out]">
-            Você já tem o plano. Só falta decidir começar.
-          </h2>
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto animate-[fade-in_0.7s_ease-out]">
-            Imagine como será daqui a 90 dias quando você olhar no espelho e ver uma versão mais saudável e confiante de si mesmo.
-          </p>
-          
-          {/* For mobile, show the mockup before the button */}
-          {isMobile && (
-            <div className="mb-8 transform hover:-translate-y-2 hover:scale-105 transition-all duration-500 animate-float">
-              <img 
-                alt="eBook Dieta Prática e Eficaz" 
-                className="w-full max-w-[250px] h-auto mx-auto" 
-                src="/lovable-uploads/5d044985-5010-45bc-b3e0-3ddda1d46c25.png" 
-              />
-            </div>
-          )}
-          
-          <CTAButton size="large" animated onClick={handleCTAClick}>
-            Quero Começar Agora
-          </CTAButton>
-          <p className="mt-4 text-sm text-gray-600">
-            Acesso imediato ao eBook e todos os bônus
-          </p>
-          
-          {/* For desktop, keep the existing layout */}
-          {!isMobile && (
-            <div className="mt-12 transform hover:-translate-y-2 hover:scale-105 transition-all duration-500 animate-float">
-              <img 
-                alt="eBook Dieta Prática e Eficaz" 
-                className="w-full max-w-[250px] h-auto mx-auto" 
-                src="/lovable-uploads/5d044985-5010-45bc-b3e0-3ddda1d46c25.png" 
-              />
-            </div>
-          )}
-        </div>
-      </SectionContainer>
+      <FinalCTASection onCTAClick={handleCTAClick} />
 
       {/* Footer */}
-      <footer className="bg-brand-blue py-8 text-white text-center">
-        <div className="container px-4">
-          <p className="mb-4">© {new Date().getFullYear()} Dieta Prática e Eficaz - Todos os direitos reservados</p>
-          <div className="flex justify-center space-x-4 text-sm">
-            <a href="#" className="hover:underline">Termos de Uso</a>
-            <a href="#" className="hover:underline">Política de Privacidade</a>
-            <a href="#" className="hover:underline">Contato</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       
       {/* Floating CTA Button */}
       <FloatingCTA onClick={handleCTAClick} />
