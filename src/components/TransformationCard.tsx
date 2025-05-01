@@ -27,9 +27,7 @@ const TransformationCard = ({
             <div className="aspect-square overflow-hidden">
               <img src={beforeImage} alt={`${name} antes`} className="w-full h-full object-cover" />
             </div>
-            <div className="absolute top-2 left-2 bg-gray-800 text-white px-3 py-1 text-sm font-medium rounded-full">
-              Antes
-            </div>
+            
           </div>
           
           {/* After Image */}
@@ -37,9 +35,7 @@ const TransformationCard = ({
             <div className="aspect-square overflow-hidden">
               <img src={afterImage} alt={`${name} depois`} className="w-full h-full object-cover" />
             </div>
-            <div className="absolute top-2 left-2 bg-brand-green text-white px-3 py-1 text-sm font-medium rounded-full">
-              Depois
-            </div>
+            
           </div>
         </div>
         
