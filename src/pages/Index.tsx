@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { toast } from 'sonner';
 import CTAButton from '@/components/CTAButton';
@@ -6,19 +5,13 @@ import SectionContainer from '@/components/SectionContainer';
 import TestimonialCard from '@/components/TestimonialCard';
 import FAQItem from '@/components/FAQItem';
 import BenefitItem from '@/components/BenefitItem';
-
 const Index = () => {
   const handleCTAClick = () => {
     toast.success("Esta é uma demonstração de landing page. O botão de compra estaria funcionando aqui.");
   };
-
-  return (
-    <div className="font-poppins">
+  return <div className="font-poppins">
       {/* Hero Section */}
-      <SectionContainer 
-        className="pt-10 lg:pt-20 pb-16 md:min-h-screen flex items-center" 
-        background="gradient"
-      >
+      <SectionContainer className="pt-10 lg:pt-20 pb-16 md:min-h-screen flex items-center" background="gradient">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-16">
           <div className="flex-1">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue leading-tight mb-4">
@@ -34,11 +27,7 @@ const Index = () => {
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative">
               <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-brand-green to-blue-500 opacity-30 blur"></div>
-              <img 
-                src="/placeholder.svg" 
-                alt="eBook Dieta Prática e Eficaz" 
-                className="relative w-64 md:w-80 h-auto transform rotate-3 shadow-2xl rounded-lg border-4 border-white"
-              />
+              <img src="/placeholder.svg" alt="eBook Dieta Prática e Eficaz" className="relative w-64 md:w-80 h-auto transform rotate-3 shadow-2xl rounded-lg border-4 border-white" />
             </div>
           </div>
         </div>
@@ -76,41 +65,15 @@ const Index = () => {
           <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-3">
             O que você vai conseguir com este método
           </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto">
-            Resultados comprovados por centenas de pessoas que já aplicaram este método em suas vidas
-          </p>
+          <p className="text-gray-700 max-w-3xl mx-auto">Resultados comprovados por diversas pessoas que já aplicaram este método em suas vidas</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <BenefitItem 
-            icon="🔥" 
-            title="Acelere seu metabolismo" 
-            description="Aprenda como otimizar seu metabolismo para queimar gordura mesmo enquanto descansa."
-          />
-          <BenefitItem 
-            icon="🥗" 
-            title="Cardápio flexível" 
-            description="Adapte o plano aos alimentos que você gosta e sua rotina, sem sofrimento ou restrições extremas."
-          />
-          <BenefitItem 
-            icon="💪" 
-            title="Preserve massa muscular" 
-            description="Emagreça de forma inteligente mantendo seus músculos e evitando o efeito sanfona."
-          />
-          <BenefitItem 
-            icon="📊" 
-            title="Resultados mensuráveis" 
-            description="Acompanhe sua evolução com métricas simples e veja os resultados semana após semana."
-          />
-          <BenefitItem 
-            icon="⏱️" 
-            title="Economia de tempo" 
-            description="Chega de perder horas pesando alimentos ou calculando valores nutricionais."
-          />
-          <BenefitItem 
-            icon="🧠" 
-            title="Mentalidade transformada" 
-            description="Desenvolva uma relação saudável com a comida e elimine a ansiedade alimentar."
-          />
+          <BenefitItem icon="🔥" title="Acelere seu metabolismo" description="Aprenda como otimizar seu metabolismo para queimar gordura mesmo enquanto descansa." />
+          <BenefitItem icon="🥗" title="Cardápio flexível" description="Adapte o plano aos alimentos que você gosta e sua rotina, sem sofrimento ou restrições extremas." />
+          <BenefitItem icon="💪" title="Preserve massa muscular" description="Emagreça de forma inteligente mantendo seus músculos e evitando o efeito sanfona." />
+          <BenefitItem icon="📊" title="Resultados mensuráveis" description="Acompanhe sua evolução com métricas simples e veja os resultados semana após semana." />
+          <BenefitItem icon="⏱️" title="Economia de tempo" description="Chega de perder horas pesando alimentos ou calculando valores nutricionais." />
+          <BenefitItem icon="🧠" title="Mentalidade transformada" description="Desenvolva uma relação saudável com a comida e elimine a ansiedade alimentar." />
         </div>
       </SectionContainer>
 
@@ -125,24 +88,9 @@ const Index = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          <TestimonialCard
-            quote="Tentei de tudo antes, mas este método finalmente me fez entender como a alimentação funciona. Perdi 8kg em 2 meses sem sofrer!"
-            name="Marcos Silva"
-            image="/placeholder.svg"
-            result="-8kg em 2 meses"
-          />
-          <TestimonialCard
-            quote="Achei que precisaria passar fome para emagrecer. Com este guia, descobri que posso comer bem e ainda assim perder peso de forma saudável."
-            name="Carla Oliveira"
-            image="/placeholder.svg"
-            result="-12kg em 3 meses"
-          />
-          <TestimonialCard
-            quote="O melhor investimento que já fiz. Método direto e sem enrolação. As planilhas de acompanhamento fazem toda diferença."
-            name="Roberto Almeida"
-            image="/placeholder.svg"
-            result="-15kg em 4 meses"
-          />
+          <TestimonialCard quote="Tentei de tudo antes, mas este método finalmente me fez entender como a alimentação funciona. Perdi 8kg em 2 meses sem sofrer!" name="Marcos Silva" image="/placeholder.svg" result="-8kg em 2 meses" />
+          <TestimonialCard quote="Achei que precisaria passar fome para emagrecer. Com este guia, descobri que posso comer bem e ainda assim perder peso de forma saudável." name="Carla Oliveira" image="/placeholder.svg" result="-12kg em 3 meses" />
+          <TestimonialCard quote="O melhor investimento que já fiz. Método direto e sem enrolação. As planilhas de acompanhamento fazem toda diferença." name="Roberto Almeida" image="/placeholder.svg" result="-15kg em 4 meses" />
         </div>
       </SectionContainer>
 
@@ -151,26 +99,18 @@ const Index = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
           <div className="md:w-1/3">
             <div className="rounded-full overflow-hidden border-4 border-brand-green w-48 h-48 mx-auto">
-              <img 
-                src="/placeholder.svg" 
-                alt="Autor do eBook" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/placeholder.svg" alt="Autor do eBook" className="w-full h-full object-cover" />
             </div>
           </div>
           <div className="md:w-2/3">
             <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-4">
               Sobre o Autor
             </h2>
-            <p className="text-gray-700 mb-4">
-              Olá! Sou nutricionista especializado em emagrecimento e transformação corporal há mais de 10 anos. Desenvolvi este método após perceber que meus próprios pacientes abandonavam as dietas tradicionais por serem muito complicadas.
-            </p>
-            <p className="text-gray-700 mb-4">
-              Testei este sistema em mim mesmo primeiro, perdendo 15kg em apenas 4 meses, e depois com centenas de pacientes que obtiveram resultados igualmente impressionantes.
-            </p>
-            <p className="text-gray-700">
-              Meu objetivo é desmistificar a nutrição e mostrar que emagrecer pode ser simples quando você entende os princípios corretos.
-            </p>
+            <p className="text-gray-700 mb-4">Olá! Meu nome é Antony Pissinatti.
+Não sou nutricionista, sou alguém que testou, errou, adaptou — e encontrou um caminho simples, direto e eficaz para transformar o corpo sem complicação.</p>
+            <p className="text-gray-700 mb-4">Fui uma única vez ao nutricionista e percebi que aquele modelo engessado não funcionava pra mim. Então passei anos estudando e testando estratégias inspiradas em atletas, até desenvolver uma abordagem prática que cabia na minha rotina — e que finalmente me deu resultado.</p>
+            <p className="text-gray-700">O melhor? Não funcionou só comigo. Pessoas próximas começaram a aplicar também e tiveram transformações reais. Foi aí que nasceu este eBook.
+Pra simplificar o que te disseram que era difícil.</p>
           </div>
         </div>
       </SectionContainer>
@@ -267,26 +207,11 @@ const Index = () => {
           </div>
           
           <div className="bg-white rounded-lg p-6 shadow-md">
-            <FAQItem 
-              question="Preciso fazer academia para ter resultados?" 
-              answer="Não, o método é baseado primariamente na alimentação. No entanto, incluímos recomendações de atividades físicas simples que podem potencializar seus resultados, caso você queira incluí-las." 
-            />
-            <FAQItem 
-              question="Este método funciona para mulheres?" 
-              answer="Sim! O método foi desenvolvido e testado para funcionar tanto para homens quanto para mulheres. Há orientações específicas para cada gênero, considerando as diferenças metabólicas." 
-            />
-            <FAQItem 
-              question="Quanto tempo leva para ver resultados?" 
-              answer="A maioria das pessoas começa a notar mudanças em 2-3 semanas. Resultados mais significativos geralmente ocorrem dentro de 4-8 semanas seguindo o programa corretamente." 
-            />
-            <FAQItem 
-              question="Vou precisar comprar alimentos caros ou especiais?" 
-              answer="Não. O plano foi desenvolvido para utilizar alimentos comuns e acessíveis. Você não precisará de nenhum ingrediente exótico ou suplemento caro." 
-            />
-            <FAQItem 
-              question="O que acontece se o método não funcionar para mim?" 
-              answer="Oferecemos garantia de 30 dias. Se você seguir o programa e não estiver satisfeito com os resultados, devolveremos seu investimento integralmente." 
-            />
+            <FAQItem question="Preciso fazer academia para ter resultados?" answer="Não, o método é baseado primariamente na alimentação. No entanto, incluímos recomendações de atividades físicas simples que podem potencializar seus resultados, caso você queira incluí-las." />
+            <FAQItem question="Este método funciona para mulheres?" answer="Sim! O método foi desenvolvido e testado para funcionar tanto para homens quanto para mulheres. Há orientações específicas para cada gênero, considerando as diferenças metabólicas." />
+            <FAQItem question="Quanto tempo leva para ver resultados?" answer="A maioria das pessoas começa a notar mudanças em 2-3 semanas. Resultados mais significativos geralmente ocorrem dentro de 4-8 semanas seguindo o programa corretamente." />
+            <FAQItem question="Vou precisar comprar alimentos caros ou especiais?" answer="Não. O plano foi desenvolvido para utilizar alimentos comuns e acessíveis. Você não precisará de nenhum ingrediente exótico ou suplemento caro." />
+            <FAQItem question="O que acontece se o método não funcionar para mim?" answer="Oferecemos garantia de 30 dias. Se você seguir o programa e não estiver satisfeito com os resultados, devolveremos seu investimento integralmente." />
           </div>
         </div>
       </SectionContainer>
@@ -320,8 +245,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
