@@ -134,15 +134,15 @@ Pra simplificar o que te disseram que era difícil.</p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
                     <span className="text-brand-green mr-2">✓</span>
-                    <span>Manual completo em PDF com 120 páginas</span>
+                    <span>Manual completo em PDF com linguagem clara</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-green mr-2">✓</span>
-                    <span>Cálculos simplificados baseados no seu peso</span>
+                    <span>Fórmula baseada no seu peso — sem contar calorias</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-green mr-2">✓</span>
-                    <span>Estratégias práticas para qualquer rotina</span>
+                    <span>Estratégia de alimentação, treino e mentalidade para qualquer rotina</span>
                   </li>
                 </ul>
               </div>
