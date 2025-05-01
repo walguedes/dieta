@@ -5,6 +5,8 @@ import SectionContainer from '@/components/SectionContainer';
 import TestimonialCard from '@/components/TestimonialCard';
 import FAQItem from '@/components/FAQItem';
 import BenefitItem from '@/components/BenefitItem';
+import TransformationCard from '@/components/TransformationCard';
+
 const Index = () => {
   const handleCTAClick = () => {
     toast.success("Esta é uma demonstração de landing page. O botão de compra estaria funcionando aqui.");
@@ -27,7 +29,7 @@ const Index = () => {
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative">
               <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-brand-green to-blue-500 opacity-30 blur"></div>
-              <img src="/placeholder.svg" alt="eBook Dieta Prática e Eficaz" className="relative w-64 md:w-80 h-auto transform rotate-3 shadow-2xl rounded-lg border-4 border-white" />
+              <img src="/lovable-uploads/2f8e1c9f-15e8-434a-8c5b-c9f3ccc54e92.png" alt="eBook Dieta Prática e Eficaz" className="relative w-64 md:w-80 h-auto transform rotate-3 shadow-2xl rounded-lg border-4 border-white" />
             </div>
           </div>
         </div>
@@ -74,6 +76,38 @@ const Index = () => {
           <BenefitItem icon="📊" title="Resultados mensuráveis" description="Acompanhe sua evolução com métricas simples e veja os resultados semana após semana." />
           <BenefitItem icon="⏱️" title="Economia de tempo" description="Chega de perder horas pesando alimentos ou calculando valores nutricionais." />
           <BenefitItem icon="🧠" title="Mentalidade transformada" description="Desenvolva uma relação saudável com a comida e elimine a ansiedade alimentar." />
+        </div>
+      </SectionContainer>
+
+      {/* Before & After Transformations Section */}
+      <SectionContainer>
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-blue mb-3">
+            Transformações Reais
+          </h2>
+          <p className="text-gray-700 max-w-3xl mx-auto">
+            Pessoas que aplicaram este método e conquistaram resultados impressionantes
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <TransformationCard 
+            name="Carlos Silva"
+            timeframe="3 meses"
+            weightLoss="-18kg"
+            beforeImage="/placeholder.svg" 
+            afterImage="/placeholder.svg"
+            testimonial="Sempre tentei dietas restritivas que não conseguia manter. Com este método, consegui emagrecer sem sofrer e mantive os resultados!"
+          />
+          
+          <TransformationCard 
+            name="Mariana Oliveira"
+            timeframe="2 meses"
+            weightLoss="-12kg"
+            beforeImage="/placeholder.svg" 
+            afterImage="/placeholder.svg"
+            testimonial="Perdi peso e ganhei energia! O método é super fácil de seguir e se encaixou perfeitamente na minha rotina."
+          />
         </div>
       </SectionContainer>
 
