@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { toast } from 'sonner';
 import CTAButton from '@/components/CTAButton';
@@ -26,8 +27,8 @@ const Index = () => {
             </CTAButton>
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
-            {/* Simplified mockup - twice the previous size with no border/frame */}
-            <div className="w-[calc(64rem*2)] md:w-[calc(80rem*2)] transform hover:-translate-y-2 transition-all duration-300">
+            {/* Adjusted size to be proportional to title text */}
+            <div className="w-full max-w-[400px] md:max-w-[450px] transform hover:-translate-y-2 hover:scale-105 transition-all duration-500 animate-float">
               <img 
                 alt="eBook Dieta Prática e Eficaz" 
                 className="w-full h-auto transform rotate-3" 
