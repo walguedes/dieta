@@ -1,3 +1,4 @@
+
 import React from 'react';
 import SectionContainer from '@/components/SectionContainer';
 import CTAButton from '@/components/CTAButton';
@@ -50,9 +51,14 @@ const OfferSection = ({
               Quero Começar Agora
             </CTAButton>
             
-            <p className="mt-4 text-sm text-gray-600">
-              Acesso imediato após a confirmação do pagamento
-            </p>
+            <div className="mt-4">
+              <p className="text-sm text-gray-600">
+                Acesso imediato após a confirmação do pagamento
+              </p>
+              <p className="mt-2 font-semibold text-green-600 bg-green-50 inline-block px-3 py-1 rounded-full border border-green-200">
+                Garantia de 7 dias ou seu dinheiro de volta
+              </p>
+            </div>
           </div>
           
           <div className="flex flex-wrap justify-center gap-4">

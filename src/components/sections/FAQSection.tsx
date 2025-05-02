@@ -21,7 +21,7 @@ const FAQSection = () => {
           <FAQItem question="Este método funciona para mulheres?" answer="Sim! O método foi desenvolvido e testado para funcionar tanto para homens quanto para mulheres. Há orientações específicas para cada gênero, considerando as diferenças metabólicas." />
           <FAQItem question="Quanto tempo leva para ver resultados?" answer="A maioria das pessoas começa a notar mudanças em 2-3 semanas. Resultados mais significativos geralmente ocorrem dentro de 4-8 semanas seguindo o programa corretamente." />
           <FAQItem question="Vou precisar comprar alimentos caros ou especiais?" answer="Não. O plano foi desenvolvido para utilizar alimentos comuns e acessíveis. Você não precisará de nenhum ingrediente exótico ou suplemento caro." />
-          <FAQItem question="O que acontece se o método não funcionar para mim?" answer="Oferecemos garantia de 30 dias. Se você seguir o programa e não estiver satisfeito com os resultados, devolveremos seu investimento integralmente." />
+          <FAQItem question="O que acontece se o método não funcionar para mim?" answer="Oferecemos garantia de 7 dias. Se você seguir o programa e não estiver satisfeito com os resultados, devolveremos seu investimento integralmente." />
         </div>
       </div>
     </SectionContainer>
